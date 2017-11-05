@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<style>
+    .item {
+        display: inline-block;
+        margin: 2px;
+        border: 1px solid black;
+        border-radius: 8px;
+        opacity: 1;
+        transition: opacity 2.9s;
+        background: url(https://pp.userapi.com/c416517/v416517512/8d25/B0rAAJzy4Y8.jpg);
+        background-attachment: inherit;
+        background-position: 66% 37%;
+        z-index: 1;
+        width: 96px;
+        height: 96px;
+    }
+
+    .tableWithImages {
+        /*width: 400px;*/
+        float: left;
+        margin-left: 30px;
+        position: absolute;
+        top: 35%;
+        left: 35%;
+
+    }
+    img{
+        display:none;
+    }
+
+    img.open{
+        display: block;
+        z-index: 2;
+    }
+    .hide{
+        background-color: red;
+        opacity: 0;
+        pointer-events: none;
+
+    }
+    body{
+        background-color: linen;
+    }
+    .container{
+        margin-top: 40px;
+        position: relative;
+    }
+    .main{
+
+        position: relative;
+       width: 100%;
+        height: auto;
+    }
+    .sideBar{
+        float:left;
+        width:315px;
+        background-image: url("https://images-na.ssl-images-amazon.com/images/I/41CwYykVhEL._SY355_.jpg");
+        height: 360px;
+        position: relative;
+        margin-left: 30px;
+    }
+    #startGame{
+        background-color: blue;
+        position: absolute;
+        left:240px;
+        border-radius: 30px;
+        border: none;
+        padding: 10px;
+    }
+    #restartGame{
+        background-color: chartreuse;
+        position: absolute;
+        left:240px;
+        border-radius: 30px;
+        border: none;
+        padding: 10px;
+        display: none;
+    }
+
+</style>
+<script src= "jquery-3.2.1.js"> </script>
+
+
+<body>
+<div class="container">
+    <div class="main">
+        <div class="sideBar">
+            <button id="startGame">Let's Start</button>
+            <button id="restartGame">Restart Game</button>
+        </div>
+        <div class="tableWithImages"></div>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
