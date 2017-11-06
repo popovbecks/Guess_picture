@@ -103,12 +103,13 @@ body{
     position: absolute;
     top:62%;
     left:67%;
+    z-index: 10;
 }
 .buttonModal button{
     border-radius: 50%;
     background-color: black;
     color:darkgray;
     font-size: 26px;
-    z-index: 10;
+
 }
 
