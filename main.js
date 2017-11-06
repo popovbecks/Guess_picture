@@ -52,8 +52,11 @@ let field = document.querySelector('.tableWithImages');
 let countOpened = 0;
 let startButton = document.querySelector('#startGame');
 let restartButton = document.querySelector('#restartGame');
+let finishButton = document.querySelector('#finish');
 let widthOfField = null;
 let heightOfField = null;
+let modalWindow = document.querySelector('.modalIsWin');
+let sideBar = document.querySelector('.sideBar');
 $.getJSON("https://kde.link/test/get_field_size.php", function (item) {      //get size of field from json
     widthOfField = item.width;
     heightOfField = item.height;
@@ -161,17 +164,23 @@ function initClick(e) {                                                // onclic
 }
 field.addEventListener('click', initClick);
 startButton.addEventListener('click', getStart);
-restartButton.addEventListener('click', getRestart)
+restartButton.addEventListener('click', getRestart);
+finishButton.addEventListener('click', finishGame)
+function showModal () {
+   modalWindow.style.display = 'block';
+   sideBar.style.display = 'none';
+    let oldTable = document.querySelector('.tableImages');
+    countOpened = 0;
+    oldTable.remove();
+}
+function finishGame () {
 
-
+    location.reload();
+}
 function checkCards() {                                      //check is win
     if (countOpened === size / 2) {
-        alert("Congratulations!!! Mission complete!!!");
-        startButton.style.display = 'block';
-        let oldTable = document.querySelector('.tableImages');
-        countOpened = 0;
-        oldTable.remove();
-        location.reload();
+        showModal();
+
     }
 }
 

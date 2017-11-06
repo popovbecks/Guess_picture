@@ -75,3 +75,40 @@ body{
     padding: 10px;
     display: none;
 }
+.modalIsWin{
+    position: absolute;
+    top:50%;
+    left: 30%;
+    display: none;
+}
+.imageModal{
+    background-image: url('http://www.mama-znaet.com/sites/default/files/kevin1.jpg');
+    background-size: 500px 400px;
+    width: 396px;
+    height: 361px;
+    position: relative;
+}
+.textModal{
+    position: absolute;
+    top:-14%;
+    left: 14%;
+}
+.textModal p{
+    font-size:40px;
+    font-weight: bolder;
+    color: crimson;
+    padding: 0;
+}
+.buttonModal{
+    position: absolute;
+    top:62%;
+    left:67%;
+}
+.buttonModal button{
+    border-radius: 50%;
+    background-color: black;
+    color:darkgray;
+    font-size: 26px;
+    z-index: 10;
+}
+
